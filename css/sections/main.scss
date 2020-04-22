@@ -1,0 +1,55 @@
+.benefits {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(256, 256, 256, .8);
+  font-family: "Proxima Nova";
+
+  @include phone {
+    position: inherit;
+  }
+}
+.benefits-items-wrap {
+  margin-bottom: 15px;
+  @include prefix-flexbox();
+  @include prefix-justify-content(space-between);
+
+  @include phone {
+    @include prefix-flex-flow(column);
+    @include prefix-align-items(center);
+  }
+}
+.benefits-item {
+  @include prefix-flexbox();
+  @include prefix-flex-flow(column);
+  @include prefix-align-items(center);
+  max-width: 290px;
+  width: 100%;
+  text-align: center;
+  padding: 0 10px;
+  @include phone {
+    margin: 15px;
+  }
+}
+.benefits-item__img {
+  width: 98px;
+  height: 98px;
+  margin: 20px 0;
+}
+.benefits-item__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 15px;
+  @include tablet {
+    font-size: 16px;
+  }
+}
+.benefits-item__info {
+  font-size: 16px;
+  @include tablet {
+    font-size: 14px;
+  }
+}
